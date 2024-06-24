@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <!-- h1 es el titulo-->
+                    <h1></h1>
+                    <!-- p es el parrafo-->
+                     <!--Los selectores es la forma en la que js selecciona algun elemento -->
+                    <p class="texto__parrafo"></p>
+                </div>
+                <!-- input representa la caja blanca donde se ingresa el número del usuario-->
+                 <!-- Para identificar un elemento sobre otros iguales se usa el 'id' -->
+                <input type="number" id = "valorUsuario" min="1" max="10" class="container__input">
+                <div class="chute container__botones">
+                    <!-- Todos los eventos empiezan con la palabra con 'on'. Ejemplo onclick-->
+                    <button onclick="verificarIntento();" class="container__boton">Intentar</button>
+                    <!-- El atributo disabled es el que determina que el boton no está disponible-->
+                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
+                </div>
+            </div>
+            <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
+        </div>
+    </div>
+
+
+    <!-- src incluye el archivo del back, el Document Object Model conecta el js con html-->
+    <script src="app.js" defer></script>
+</body>
+
+</html>
